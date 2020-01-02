@@ -170,6 +170,21 @@ upstream myserver {
 
 为了加快网站的解析速度，可以把动态页面和静态页面由不同的服务器来解析，加快解析速度。降低原来单个服务器的压力。
 
+server {
+    listen       80;
+    server_name  192.168.17.129;
+
+    location /www/ {
+        root    /data/;
+        index  index.html index.htm;
+    }
+
+    location /image/ {
+        root    /data/;
+        autoindex   on; // 列出文件夹中的内容
+    }
+}
+
 ## nginx配置高可用集群
 
 ## nginx原理
