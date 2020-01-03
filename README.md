@@ -187,4 +187,11 @@ server {
 
 ## nginx配置高可用集群
 
+准备工作
+
+1. 需要两台nginx服务器
+2. 需要keepalived       使用yum命令  yum install keepalived -y
+安装之后，在etc里面生成目录keeplived，有文件keepalived.conf
+3. 需要虚拟ip
+
 ## nginx原理
